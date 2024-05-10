@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower Display</title>
+    <style>
+        #flower {
+            display: none;
+            width: 200px;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button id="showFlower">Show Flower</button>
+    <img id="flower" src="https://your-image-url.com/flower.jpg" alt="A Beautiful Flower">
+
+    <script>
+        document.getElementById('showFlower').onclick = function() {
+            var flower = document.getElementById('flower');
+            flower.style.display = 'block';
+        };
+    </script>
+</body>
+</html>
