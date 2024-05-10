@@ -5,22 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flower Display</title>
     <style>
-        #flower {
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        #flower-container {
             display: none;
-            width: 200px;
-            height: auto;
-            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 1000;
+        }
+        #showFlower {
+            position: fixed;
+            z-index: 1010;
+            top: 20px;
+            left: 20px;
         }
     </style>
 </head>
 <body>
     <button id="showFlower">Show Flower</button>
-    <img id="flower" src="flowers.jpg" alt="A Beautiful Flower">
+    <div id="flower-container"></div>
 
     <script>
         document.getElementById('showFlower').onclick = function() {
-            var flower = document.getElementById('flower');
-            flower.style.display = 'block';
+            var container = document.getElementById('flower-container');
+            container.style.display = 'block';
+            container.style.backgroundImage = 'url("flowers.jpg")';
         };
     </script>
 </body>
